@@ -1,22 +1,17 @@
-
 import express from 'express';
-import  ConnectedDB  from './src/config/ConnectedDB.js';
-
 import dotenv from 'dotenv';
-dotenv.config();
+import ConnectedDB from './src/config/ConnectedDB.js'; // Ensure this path is correct
 
+dotenv.config(); // Load environment variables from .env file
 
-const app =express();
-
+const app = express();
 
 ConnectedDB();
-console.log('mongo_uri:', process.env.MONGO_URI);
 
-
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
    res.send('hello world 123');
-})
+});
 
-app.listen(3000,()=>{
-   console.log('server is running....')
-})
+app.listen(3000, () => {
+   console.log('Server is running on http://localhost:3000');
+});
