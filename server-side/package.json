@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev":"nodemon server-side/index.js"
+    "dev": "nodemon server-side/index.js"
   },
   "keywords": [],
   "author": "",
